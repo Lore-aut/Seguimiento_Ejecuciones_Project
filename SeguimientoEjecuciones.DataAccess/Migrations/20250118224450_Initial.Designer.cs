@@ -11,7 +11,7 @@ using SeguimientoEjecuciones.DataAccess.Context;
 namespace SeguimientoEjecuciones.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250118194235_Initial")]
+    [Migration("20250118224450_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -112,8 +112,7 @@ namespace SeguimientoEjecuciones.DataAccess.Migrations
 
                     b.Property<string>("CODE")
                         .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("CODE");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -136,6 +135,10 @@ namespace SeguimientoEjecuciones.DataAccess.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CODE")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")

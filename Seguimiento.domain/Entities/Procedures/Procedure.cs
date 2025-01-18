@@ -20,7 +20,7 @@ namespace Seguimiento.domain.Entities.Procedures
         /// operaciones que contiene el procedimiento
         /// </summary>
        public  List<Operation> operations { set; get; }
-        public string CODE { get; }
+        public string CODE { get; set; }
         public string Name { get; set; }
         public string Identifier { get; set; }
         public string Description { get; set; }
