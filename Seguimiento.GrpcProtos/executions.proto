@@ -1,0 +1,83 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "Seguimiento.GrpcProtos";
+
+package GrpcProtos;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/struct.proto";
+import "common.proto";
+
+
+
+service Execution {
+  
+  rpc CreateExecution (CreateExecutionRequest) returns (ExecutionDTO);
+  rpc GetExecution (GetRequest) returns (NullableExecutionDTO);
+  rpc GetAllExecutions (google.protobuf.Empty) returns (Executions);
+  rpc UpdateExecution(ExecutionDTO) returns (google.protobuf.Empty);
+  rpc DeleteExecution(DeleteRequest) returns (google.protobuf.Empty);
+  rpc StartExecution(StartRequest) returns(google.protobuf.Empty); 
+  rpc EndExecution(EndRequest) returns(google.protobuf.Empty);
+  rpc PauseExecution(PauseRequest) returns(google.protobuf.Empty); 
+}
+
+
+message ExecutionDTO{
+	string post_entity =1;
+	string actual_entity =2;
+	NullableDateTimeDTO beggin = 3; 
+	NullableDateTimeDTO end = 4; 
+	StateDTO state = 5; 
+	ExecTypeDTO execType =6;
+	string identifier=7;
+
+}
+
+message NullableDateTimeDTO{
+	oneof kind{
+		google.protobuf.NullValue null =1;
+		DateTimeDTO date = 2;
+	}
+}
+
+enum ExecTypeDTO{
+    fase = 0;
+	operation =1;
+	procedure =2;
+}
+
+
+message Executions{
+	repeated ExecutionDTO items = 1;
+}
+
+message NullableExecutionDTO{
+	oneof kind{
+		google.protobuf.NullValue null = 1;
+		ExecutionDTO execution = 2;
+	}
+}
+
+message CreateExecutionRequest{
+	ExecTypeDTO ex = 1;
+	string actualEntity =2;
+	string pos =3;
+}      
+
+
+enum StateDTO{
+	idle = 0;
+	running = 1;
+	paused = 2;
+	completed = 3;
+}
+
+
+message DateTimeDTO{
+	int32 year = 1; 
+	int32 month = 2;
+	int32 day = 3; 
+}
