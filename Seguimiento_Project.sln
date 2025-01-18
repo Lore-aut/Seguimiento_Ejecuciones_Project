@@ -5,7 +5,9 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seguimiento.domain", "Seguimiento.domain\Seguimiento.domain.csproj", "{6AA031A2-BE79-43AC-AC04-297F1AC933FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguimiento.Contracts", "Seguimiento.Contracts\Seguimiento.Contracts.csproj", "{A231AB77-F902-4FE7-9C10-120F0F091DE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seguimiento.Contracts", "Seguimiento.Contracts\Seguimiento.Contracts.csproj", "{A231AB77-F902-4FE7-9C10-120F0F091DE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeguimientoEjecuciones.DataAccess", "SeguimientoEjecuciones.DataAccess\SeguimientoEjecuciones.DataAccess.csproj", "{03B9A71E-79B3-48FC-B4AC-3516498DEDD2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{A231AB77-F902-4FE7-9C10-120F0F091DE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A231AB77-F902-4FE7-9C10-120F0F091DE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A231AB77-F902-4FE7-9C10-120F0F091DE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03B9A71E-79B3-48FC-B4AC-3516498DEDD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03B9A71E-79B3-48FC-B4AC-3516498DEDD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03B9A71E-79B3-48FC-B4AC-3516498DEDD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03B9A71E-79B3-48FC-B4AC-3516498DEDD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
