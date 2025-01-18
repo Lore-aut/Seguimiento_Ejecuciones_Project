@@ -109,8 +109,7 @@ namespace SeguimientoEjecuciones.DataAccess.Migrations
 
                     b.Property<string>("CODE")
                         .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("CODE");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -133,6 +132,10 @@ namespace SeguimientoEjecuciones.DataAccess.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CODE")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Description")

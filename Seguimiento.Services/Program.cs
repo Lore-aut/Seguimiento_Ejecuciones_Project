@@ -52,6 +52,7 @@ namespace Seguimiento.Services
 
             app.MapGrpcService<FasesService>();
             app.MapGrpcService<OperationsService>();
+            app.MapGrpcService<ProceduresService>();
 
             app.MapGet("/", () => "Communication with gRPC endpoints must be made through a gRPC client. To learn how to create a client, visit: https://go.microsoft.com/fwlink/?linkid=2086909");
 
