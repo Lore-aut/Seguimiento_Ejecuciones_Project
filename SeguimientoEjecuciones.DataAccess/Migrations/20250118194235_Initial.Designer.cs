@@ -11,14 +11,14 @@ using SeguimientoEjecuciones.DataAccess.Context;
 namespace SeguimientoEjecuciones.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250117212509_Inicio")]
-    partial class Inicio
+    [Migration("20250118194235_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.0");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
 
             modelBuilder.Entity("OperationPhasesId", b =>
                 {
@@ -109,6 +109,11 @@ namespace SeguimientoEjecuciones.DataAccess.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
+
+                    b.Property<string>("CODE")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("CODE");
 
                     b.Property<string>("Description")
                         .IsRequired()

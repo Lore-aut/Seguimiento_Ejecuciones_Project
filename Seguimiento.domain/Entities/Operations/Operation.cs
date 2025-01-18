@@ -31,7 +31,7 @@ namespace Seguimiento.domain.Entities.Operations
         public string Identifier { get; set; }
         public string Description { get; set; }
 
-        public string CODE { get; }
+        public string CODE { get; set; }
 
         #endregion
 
