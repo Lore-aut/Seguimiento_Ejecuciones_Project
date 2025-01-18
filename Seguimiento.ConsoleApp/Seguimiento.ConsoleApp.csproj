@@ -16,7 +16,7 @@
     <ProjectReference Include="..\Seguimiento.domain\Seguimiento.domain.csproj" />
     <ProjectReference Include="..\Seguimiento.GrpcProtos\Seguimiento.GrpcProtos.csproj" />
     <ProjectReference Include="..\Seguimiento.Services\Seguimiento.Services.csproj" />
-    <ProjectReference Include="..\SeguimientoEjecuc.Application\SeguimientoEjecuc.Application.csproj" />
+    <ProjectReference Include="..\SeguimientoEjecuc.Application\SeguimientoEjecuciones.Application.csproj" />
     <ProjectReference Include="..\SeguimientoEjecuciones.DataAccess\SeguimientoEjecuciones.DataAccess.csproj" />
   </ItemGroup>
 
