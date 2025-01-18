@@ -6,6 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+ <ItemGroup>
+   <PackageReference Include="Google.Protobuf" Version="3.29.3" />
+   <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
+ </ItemGroup>
+
 <ItemGroup>
 	<Protobuf Include =" *.proto" GrpcServices="Both" />
 </ItemGroup>
