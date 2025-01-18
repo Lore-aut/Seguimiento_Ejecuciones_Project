@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.67.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Seguimiento.Contracts\Seguimiento.Contracts.csproj" />
+    <ProjectReference Include="..\Seguimiento.domain\Seguimiento.domain.csproj" />
+    <ProjectReference Include="..\Seguimiento.GrpcProtos\Seguimiento.GrpcProtos.csproj" />
+    <ProjectReference Include="..\Seguimiento.Services\Seguimiento.Services.csproj" />
+    <ProjectReference Include="..\SeguimientoEjecuc.Application\SeguimientoEjecuc.Application.csproj" />
+    <ProjectReference Include="..\SeguimientoEjecuciones.DataAccess\SeguimientoEjecuciones.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>
