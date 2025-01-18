@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seguimiento.GrpcProtos", "S
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeguimientoEjecuc.Application", "SeguimientoEjecuc.Application\SeguimientoEjecuc.Application.csproj", "{DB94D541-F6D9-49C8-9ABE-E6A51A853CAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguimiento.Services", "Seguimiento.Services\Seguimiento.Services.csproj", "{1077B676-38CD-48FB-87D2-84B2A269EB96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seguimiento.Services", "Seguimiento.Services\Seguimiento.Services.csproj", "{1077B676-38CD-48FB-87D2-84B2A269EB96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seguimiento.ConsoleApp", "Seguimiento.ConsoleApp\Seguimiento.ConsoleApp.csproj", "{1228C771-DA6D-4FD2-AB01-F5E00ADF3BF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{1077B676-38CD-48FB-87D2-84B2A269EB96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1077B676-38CD-48FB-87D2-84B2A269EB96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1077B676-38CD-48FB-87D2-84B2A269EB96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1228C771-DA6D-4FD2-AB01-F5E00ADF3BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1228C771-DA6D-4FD2-AB01-F5E00ADF3BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1228C771-DA6D-4FD2-AB01-F5E00ADF3BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1228C771-DA6D-4FD2-AB01-F5E00ADF3BF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
