@@ -16,7 +16,7 @@ using SeguimientoEjecuciones.Application.Fases.Commands.DeleteFase;
 
 
 
-namespace SeguimientoEjecuciones.Service.Services
+namespace SeguimientoEjecuciones.Services.Services
 {
     public class FasesService : Fase.FaseBase
     {
@@ -60,7 +60,7 @@ namespace SeguimientoEjecuciones.Service.Services
 
             var result = _mediator.Send(query).Result;
 
-            // Convirtiendo de lista de motocicletas al mensaje de lista de DTOs de motocicletas.
+            // Convirtiendo de lista de fases al mensaje de lista de DTOs de fases.
             var FasesDTOs = new Fases();
             FasesDTOs.Items.AddRange(result.Select(m => _mapper.Map<FaseDTO>(m)));
 
