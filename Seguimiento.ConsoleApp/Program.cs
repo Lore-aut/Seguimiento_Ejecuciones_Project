@@ -22,7 +22,7 @@ namespace Seguimiento.ConsoleApp
                 HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
 
             var channel = GrpcChannel.ForAddress(
-                "https://localhost:7259",
+                "https://localhost:7068",
                 new GrpcChannelOptions { HttpHandler = httpHandler });
 
             if (channel is null)
