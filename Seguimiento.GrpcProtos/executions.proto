@@ -32,8 +32,7 @@ message ExecutionDTO{
 	NullableDateTimeDTO end = 4; 
 	StateDTO state = 5; 
 	ExecTypeDTO execType =6;
-	string identifier=7;
-
+	string id = 7;
 }
 
 message NullableDateTimeDTO{
