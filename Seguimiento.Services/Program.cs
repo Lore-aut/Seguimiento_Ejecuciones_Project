@@ -47,9 +47,9 @@ namespace Seguimiento.Services
 
             var app = builder.Build();
             // Add services to the container.
-    
 
 
+            app.MapGrpcService<ExecutionsService>();
             app.MapGrpcService<FasesService>();
             app.MapGrpcService<OperationsService>();
             app.MapGrpcService<ProceduresService>();
