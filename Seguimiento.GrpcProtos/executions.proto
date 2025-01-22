@@ -26,14 +26,15 @@ service Execution {
 
 
 message ExecutionDTO{
-	string post_entity =1;
+	ExecTypeDTO execType =1;
 	string actual_entity =2;
-	NullableDateTimeDTO beggin = 3; 
-	NullableDateTimeDTO end = 4; 
-	StateDTO state = 5; 
-	ExecTypeDTO execType =6;
+	string post_entity =3;
+	NullableDateTimeDTO beggin = 4; 
+	NullableDateTimeDTO end = 5; 
+	StateDTO state = 6; 
 	string id = 7;
 }
+
 
 message NullableDateTimeDTO{
 	oneof kind{
@@ -41,6 +42,7 @@ message NullableDateTimeDTO{
 		DateTimeDTO date = 2;
 	}
 }
+
 
 enum ExecTypeDTO{
     fase = 0;
@@ -63,7 +65,7 @@ message NullableExecutionDTO{
 message CreateExecutionRequest{
 	ExecTypeDTO ex = 1;
 	string actualEntity =2;
-	string pos =3;
+	string postEntity =3;
 }      
 
 

@@ -16,7 +16,9 @@ namespace SeguimientoEjecuciones.Service.Mappers
 
 
             CreateMap<Seguimiento.domain.Entities.Executions.Execution, Seguimiento.GrpcProtos.ExecutionDTO>()
-                       .ForMember(dest => dest.PostEntity, opt => opt.MapFrom(src => src.post_entity.ToString()))
+
+                       .ForMember(dest=> dest.PostEntity, opt => opt.MapFrom(src => src.post_entity.ToString()))
+
                        .ForMember(dest => dest.ActualEntity, opt => opt.MapFrom(src => src.actual_entity.ToString()))
                        .ForMember(dest => dest.Id, opt => opt.MapFrom(src => src.Id.ToString()))
                        .ForMember(dest => dest.Beggin, opt => opt.MapFrom(src =>
@@ -56,7 +58,7 @@ namespace SeguimientoEjecuciones.Service.Mappers
                          ExecType.ProcedureExecution));
 
             CreateMap<Seguimiento.GrpcProtos.ExecutionDTO, Seguimiento.domain.Entities.Executions.Execution>()
-                        .ForMember(dest => dest.post_entity, opt => opt.MapFrom(src => Guid.Parse(src.PostEntity)))
+                     .ForMember(dest=> dest.post_entity, opt => opt.MapFrom(src => Guid.Parse(src.PostEntity)))
                         .ForMember(dest => dest.actual_entity, opt => opt.MapFrom(src => Guid.Parse(src.ActualEntity)))
                         .ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.Parse(src.Id)))
                         .ForMember(dest => dest.beggin, opt => opt.MapFrom(src =>

@@ -54,8 +54,10 @@ namespace Seguimiento.DataAccess.Tests
         [DataRow(2024,1,3,2024,3,2,State.Idle,ExecType.ProcedureExecution)]
         [TestMethod]
 
-        public void Can_Add_ExecutionP(int year1,int month1,int day1,int year2,int month2,int day2,State _state,ExecType _type)
+        public void Can_Add_Execution(int year1,int month1,int day1,int year2,int month2,int day2,State _state,ExecType _type)
         {
+
+
             // Arrange
             Guid id_post_entity = Guid.NewGuid();
             Guid id_actual_entity = Guid.NewGuid();
@@ -63,10 +65,10 @@ namespace Seguimiento.DataAccess.Tests
 
             
             Execution exec = new Execution(
-                _type,
+                 _type,
                 id_actual_entity,
+                id_post_entity,
                 id,
-                id_post_entity, 
                 new DateTime(year1, month1, day1),
                 new DateTime(year2, month2, day2),
                  _state
@@ -84,73 +86,11 @@ namespace Seguimiento.DataAccess.Tests
 
 
 
-        [DataRow(2023, 2, 5, 2023, 6, 3, State.Running, ExecType.FaseExecution)]
-
-        [TestMethod]
-        public void Can_Add_ExecutionF(int year1, int month1, int day1, int year2, int month2, int day2, State _state, ExecType _type)
-        {
-            // Arrange
-            Guid id_post_entity = Guid.NewGuid();
-            Guid id_actual_entity = Guid.NewGuid();
-            Guid id = Guid.NewGuid();
-
-
-            Execution execf = new Execution(
-                _type,
-                id_actual_entity,
-                id,
-                 id_post_entity,
-                new DateTime(year1, month1, day1),
-                new DateTime(year2, month2, day2),
-                _state);
-
-
-            // Execute
-            _executionRepository.AddExecution(execf);
-            _unitOfWork.SaveChanges();
-
-            // Assert
-            Execution? loadedExecution = _executionRepository.GetExecutionById(id);
-            Assert.IsNotNull(loadedExecution);
-        }
-
-
-
-        [DataRow(2025, 8, 9, 2025, 1,2, State.Completed, ExecType.OperationExecution)]
-
-        [TestMethod]
-        public void Can_Add_ExecutionO(int year1, int month1, int day1, int year2, int month2, int day2, State _state, ExecType _type)
-        {
-            // Arrange
-            Guid id_post_entity = Guid.NewGuid();
-            Guid id_actual_entity = Guid.NewGuid();
-            Guid id = Guid.NewGuid();
-
-
-            Execution execo = new Execution(
-               _type,
-               id_actual_entity,
-               id,
-                id_post_entity,
-               new DateTime(year1, month1, day1),
-               new DateTime(year2, month2, day2),
-               _state);
-
-
-            // Execute
-            _executionRepository.AddExecution(execo);
-            _unitOfWork.SaveChanges();
-
-            // Assert
-            Execution? loadedExecution = _executionRepository.GetExecutionById(id);
-            Assert.IsNotNull(loadedExecution);
-        }
-
 
 
         [DataRow(0)]
         [TestMethod]
-        public void Can_Get_ExecutionP_By_Id(int position)
+        public void Can_Get_Execution_By_Id(int position)
         {
             // Arrange
             var executions = _executionRepository.GetAllExecutions().ToList();
@@ -165,41 +105,7 @@ namespace Seguimiento.DataAccess.Tests
             Assert.IsNotNull(loadedExecution);
         }
 
-        [DataRow(0)]
-        [TestMethod]
-        public void Can_Get_ExecutionF_By_Id(int position)
-        {
-            // Arrange
-            var executions = _executionRepository.GetAllExecutions().ToList();
-            Assert.IsNotNull(executions);
-            Assert.IsTrue(position < executions.Count);
-            Execution execFToGet = executions[position];
-
-            // Execute
-            Execution? loadedExecutionF = _executionRepository.GetExecutionById(execFToGet.Id);
-
-            // Assert
-            Assert.IsNotNull(loadedExecutionF);
-        }
-
-        [DataRow(0)]
-        [TestMethod]
-        public void Can_Get_ExecutionO_By_Id(int position)
-        {
-            // Arrange
-            var executions = _executionRepository.GetAllExecutions().ToList();
-            Assert.IsNotNull(executions);
-            Assert.IsTrue(position < executions.Count);
-            Execution execOToGet = executions[position];
-
-            // Execute
-            Execution? loadedExecutionO = _executionRepository.GetExecutionById(execOToGet.Id);
-
-            // Assert
-            Assert.IsNotNull(loadedExecutionO);
-        }
-
-
+      
         [TestMethod]
         public void Cannot_Get_Execution_By_Invalid_Id()
         {

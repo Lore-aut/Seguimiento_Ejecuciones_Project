@@ -42,10 +42,12 @@ namespace SeguimientoEjecuciones.Services.Services
         public override Task<ExecutionDTO> CreateExecution(CreateExecutionRequest request, ServerCallContext context)
         {
 
+
             var command = new CreateExecutionCommand(
                  (Seguimiento.domain.Types.ExecType)request.Ex,
                  Guid.Parse(request.ActualEntity),
-                 Guid.Parse(request.Pos));
+                 Guid.Parse(request.PostEntity));
+           
 
             var result = _mediator.Send(command).Result;
 

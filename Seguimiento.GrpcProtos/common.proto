@@ -32,28 +32,29 @@ message PauseRequest{
 
 
 message FaseDTO{
+
     string name = 1;
     string id =2;
     string Description=3;
-	repeated OperationDTO items = 4;
-	string identifier=5;
+	string identifier=4;
+ repeated string items =5; 
 }
 
 message OperationDTO{
-    repeated FaseDTO items1 = 1;
-	repeated ProcedureDTO items2 = 2;
-    string name = 3;
-	string id = 4;
-	string description = 5;
-    string code = 6;  
-    string identifier=7;
+    string name = 1;
+	string id = 2;
+	string description = 3;
+    string code = 4;  
+    string identifier=5;
+	repeated string items1 =6;
+	repeated string items2 =7;
 }
 
 message ProcedureDTO{
-	repeated OperationDTO items = 1;
-	string name = 2;
-	string id = 3;
-	string description = 4;
-    string code = 5; 
-	string identifier=6;
+	string name = 1;
+	string id = 2;
+	string description = 3;
+    string code = 4; 
+	string identifier=5;
+	repeated string items = 6; 
 }

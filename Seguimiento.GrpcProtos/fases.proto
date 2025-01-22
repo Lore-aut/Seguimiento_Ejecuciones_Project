@@ -17,6 +17,7 @@ service Fase {
   rpc GetAllFases (google.protobuf.Empty) returns (Fases);
   rpc UpdateFase(FaseDTO) returns (google.protobuf.Empty);
   rpc DeleteFase(DeleteRequest) returns (google.protobuf.Empty);
+
 }
 
 
@@ -36,3 +37,4 @@ message CreateFaseRequest{
     string id =2;
     string Description=3;
 }
+

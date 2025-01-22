@@ -50,6 +50,8 @@ namespace Seguimiento.domain.Entities.Fases
             Description = description;
 
         }
+
+        public Fase(Guid Id): base(Id) { }
     }
 }
 

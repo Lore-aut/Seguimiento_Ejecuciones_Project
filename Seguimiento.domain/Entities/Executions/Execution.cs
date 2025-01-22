@@ -43,13 +43,13 @@ namespace Seguimiento.domain.Entities.Executions
         /// <param name="e"></param>
         /// <param name="s"></param>
 
-        public Execution(ExecType ex,Guid actualEntity,Guid Id, Guid postEntity, DateTime? b=null,DateTime? e=null, State s=State.Idle) : base(Id)
+        public Execution(ExecType ex,Guid actualEntity, Guid postEntity, Guid Id,DateTime? b=null,DateTime? e=null, State s=State.Idle) : base(Id)
         {   
             beggin = b;
             end = e;
             execType = ex;
             actual_entity = actualEntity;
-            post_entity = postEntity;
+            post_entity = postEntity == Guid.Empty ? Guid.Empty : postEntity;
             state = s;
         }
 

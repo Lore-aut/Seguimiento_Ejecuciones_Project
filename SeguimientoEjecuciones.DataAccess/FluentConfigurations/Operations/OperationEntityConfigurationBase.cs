@@ -22,8 +22,10 @@ namespace SeguimientoEjecuciones.DataAccess.FluentConfigurations.Operations
 
             
             builder.HasMany(x => x.fases).WithMany(x=>x.operations).UsingEntity("OperationPhasesId");
-            builder.HasMany(x => x.procs).WithMany(x=>x.operations).UsingEntity("OperationProccessId"); ;
+            builder.HasMany(x => x.procs).WithMany(x=>x.operations).UsingEntity("OperationProccessId"); 
+
             base.Configure(builder);
+           
 
 
         }

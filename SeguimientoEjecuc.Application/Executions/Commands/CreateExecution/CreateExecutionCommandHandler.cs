@@ -30,9 +30,9 @@ namespace SeguimientoEjecuciones.Application.Executions.Commands.CreateExecution
             Execution result = new Execution(
                 request.ex,
                 request.actualEntity,
-                new Guid(),
-                request.pos)
-                ;
+                request.postEntity,
+                new Guid());
+
 
             _executionRepository.AddExecution(result);
             _unitOfWork.SaveChanges();

@@ -37,7 +37,7 @@ namespace SeguimientoEjecuciones.DataAccess.Repositories.Executions
 
 
         public void UpdateExecution(Execution execution)
-        {
+        {   
             _context.exec.Update(execution);
         }
 
