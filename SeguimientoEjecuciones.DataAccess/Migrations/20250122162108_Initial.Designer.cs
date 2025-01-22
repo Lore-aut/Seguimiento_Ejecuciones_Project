@@ -11,7 +11,7 @@ using SeguimientoEjecuciones.DataAccess.Context;
 namespace SeguimientoEjecuciones.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20250118224450_Initial")]
+    [Migration("20250122162108_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

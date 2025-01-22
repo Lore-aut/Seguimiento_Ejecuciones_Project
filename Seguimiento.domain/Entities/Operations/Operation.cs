@@ -55,6 +55,11 @@ namespace Seguimiento.domain.Entities.Operations
             Description = description;
             CODE = unitycode;
         }
+
+        public Operation(Guid Id): base(Id)
+        {
+
+        }
     }
 
 }

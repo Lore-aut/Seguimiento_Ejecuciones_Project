@@ -17,7 +17,8 @@ namespace SeguimientoEjecuciones.Service.Mappers
                 .ForMember(t => t.Code, o => o.MapFrom(s => s.CODE))
                 .ForMember(t => t.Identifier, o => o.MapFrom(s => s.Identifier))
                 .ForMember(t => t.Id, o => o.MapFrom(s => s.Id.ToString()))
-                .ForMember(t => t.Items, o => o.MapFrom(s => s.operations));
+                .ForMember(t => t.Items, o => o.MapFrom(s => s.operations.Select(c => c.Id.ToString())));
+
 
             CreateMap<Seguimiento.GrpcProtos.ProcedureDTO, Seguimiento.domain.Entities.Procedures.Procedure>()
                 .ForMember(t => t.Name, o => o.MapFrom(s => s.Name))
@@ -25,7 +26,8 @@ namespace SeguimientoEjecuciones.Service.Mappers
                 .ForMember(t => t.Identifier, o => o.MapFrom(s => s.Identifier))
                 .ForMember(t => t.Id, o => o.MapFrom(s => new Guid(s.Id)))
                 .ForMember(t => t.Description, o => o.MapFrom(s => s.Description))
-                .ForMember(t => t.operations, o => o.MapFrom(s => s.Items));
+                 .ForMember(dest => dest.operations, opt => opt.MapFrom(src =>
+                src.Items.Select(cadena => new Seguimiento.domain.Entities.Operations.Operation(Guid.Parse(cadena))).ToList()));
 
         }
 

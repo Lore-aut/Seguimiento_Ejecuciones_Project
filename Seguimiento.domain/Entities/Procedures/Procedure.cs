@@ -50,6 +50,8 @@ namespace Seguimiento.domain.Entities.Procedures
             Description = description;
             CODE = unitycode;
         }
+
+        public Procedure(Guid Id): base(Id) { }
     }
 
 }

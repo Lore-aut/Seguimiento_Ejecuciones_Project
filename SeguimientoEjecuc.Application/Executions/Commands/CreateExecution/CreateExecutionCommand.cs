@@ -10,6 +10,6 @@ using seguimiento.domain.types;
 
 namespace SeguimientoEjecuciones.Application.Executions.Commands.CreateExecution
 {
-    public record CreateExecutionCommand(ExecType ex, Guid actualEntity, Guid pos) : ICommand<Execution>;
+    public record CreateExecutionCommand(ExecType ex, Guid actualEntity, Guid postEntity) : ICommand<Execution>;
 }
 

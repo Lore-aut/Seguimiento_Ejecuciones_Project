@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Seguimiento.domain.Entities.Fases;
 using Seguimiento.domain.Entities;
 using SeguimientoEjecuciones.DataAccess.Repositories.Fases;
+using Seguimiento.domain.Entities.Operations;
 
 
 namespace SeguimientoEjecuciones.DataAccess.Repositories.Fases
@@ -28,7 +29,6 @@ namespace SeguimientoEjecuciones.DataAccess.Repositories.Fases
             _context.Fases.Remove(fase);
         }
 
-       
         public IEnumerable<Fase> GetAllFases()
         {
             return _context.Fases.ToList();
@@ -43,8 +43,10 @@ namespace SeguimientoEjecuciones.DataAccess.Repositories.Fases
         public void UpdateFase(Fase fase)
         {
             _context.Fases.Update(fase);
+
         }
 
+    
 
     }
 }

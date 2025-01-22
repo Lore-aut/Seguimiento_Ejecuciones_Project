@@ -24,7 +24,7 @@ namespace SeguimientoEjecuciones.DataAccess.FluentConfigurations.Executions
             builder.Property(x => x.execType).HasConversion<string>();
             builder.Property(x => x.beggin).HasColumnType("datetime");
             builder.Property(x => x.end).HasColumnType("datetime");
-
+          
             base.Configure(builder);
 
 

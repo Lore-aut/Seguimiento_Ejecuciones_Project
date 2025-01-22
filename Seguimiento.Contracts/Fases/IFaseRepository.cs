@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Seguimiento.domain.Entities.Operations;
 
 namespace  Seguimiento.Contracts.Fases
 {
@@ -45,5 +46,7 @@ namespace  Seguimiento.Contracts.Fases
         /// </summary>
         /// <param name="Fase">Fase a eliminar.</param>
         void DeleteFase(Fase fase);
+
+       
     }
 }
